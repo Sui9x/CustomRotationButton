@@ -182,15 +182,8 @@ class Hook : IXposedHookLoadPackage {
                 // light/dark cfg
                 param.args[1] = newLight
                 param.args[2] = newDark
-    
-                val aFloat = android.graphics.Color.alpha(newDark) / 255f
 
-                val oval = android.graphics.Color.valueOf(
-                    android.graphics.Color.red(newDark).toFloat(),
-                    android.graphics.Color.green(newDark).toFloat(),
-                    android.graphics.Color.blue(newDark).toFloat(),
-                    aFloat
-                )
+                val oval = android.graphics.Color.valueOf(newDark)
 
                 when (param.args[5]) {
                     is android.graphics.Color -> param.args[5] = oval
