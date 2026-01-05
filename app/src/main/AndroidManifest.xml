@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sui.customrotationbutton">
+    <application
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:label="CustomRotationButton"
+        android:hasCode="true">
+        <activity
+            android:name="com.sui.customrotationbutton.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Custom floting rotation button" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+        <meta-data android:name="xposedsharedprefs" android:value="true" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/example_scope" />
+        <meta-data
+            android:name="lsposedmodule"
+            android:value="true" />
+    </application>
+</manifest>
